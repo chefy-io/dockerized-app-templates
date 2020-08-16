@@ -1,1 +1,1 @@
-# classkick-orders
+# Dockerized application templates
