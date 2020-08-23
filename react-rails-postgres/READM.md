@@ -7,10 +7,10 @@
     - Node: latest
   - Typescript: latest
 - Backend:
-  - Python: 3.7
-  - Django: 3.1
+  - Ruby: 2.7
+  - Rails: 6.0
 - Storage:
-  - MySQL: 8.0
+  - Postgres: 12.0
 
 ## Install
 
@@ -23,27 +23,11 @@
 > docker exec -ti <frontend-app-container> bash
 > yarn start
 
-You can access the starter React app on `localhost:3000`
-
 - Start backend
 
 > docker exec -ti <backend-app-container> bash
 
-You should see a project directory like below:
-```
-backend/
-  migrations/
-  __init__.py
-  asgi.py
-  urls.py
-  views.py
-  wsgi.py
-Dockerfile
-manage.py
-requirements.txt
-```
+Start Rails app:
 
-Start Django app:
-
-> python3 manage.py runserver 0.0.0.0:5000
-
+> rake db:create db:migrate
+> rails s -b 0.0.0.0
